@@ -1,0 +1,26 @@
+{
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/LiveWindow/RomiDrivetrain": "Subsystem",
+      "/LiveWindow/Ungrouped/DifferentialDrive[1]": "DifferentialDrive",
+      "/LiveWindow/Ungrouped/Scheduler": "Scheduler"
+    }
+  },
+  "NetworkTables": {
+    "LiveWindow": {
+      "RomiDrivetrain": {
+        "open": true
+      }
+    },
+    "Romi": {
+      "Config": {
+        "open": true
+      },
+      "Status": {
+        "open": true
+      },
+      "open": true
+    }
+  }
+}

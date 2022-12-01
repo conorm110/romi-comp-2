@@ -23,7 +23,6 @@ public class TeleopCommand extends CommandBase {
   public TeleopCommand(RomiDrivetrain romi_drive_train, Joystick joystick) {
     m_subsystem = romi_drive_train;
     m_joystick = joystick;
-    m_subsystem.arcadeDrive(m_joystick.getX(),m_joystick.getY()); // added line - test
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(romi_drive_train);
   }

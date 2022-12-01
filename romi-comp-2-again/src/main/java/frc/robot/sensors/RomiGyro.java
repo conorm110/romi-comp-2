@@ -9,7 +9,7 @@ import edu.wpi.first.hal.SimDevice.Direction;
 import edu.wpi.first.hal.SimDouble;
 
 public class RomiGyro {
-  private SimDouble m_simRateX;
+  private static SimDouble m_simRateX;
   private SimDouble m_simRateY;
   private SimDouble m_simRateZ;
   private SimDouble m_simAngleX;
@@ -40,7 +40,7 @@ public class RomiGyro {
    *
    * @return rate of turn in degrees-per-second
    */
-  public double getRateX() {
+  public static double getRateX() {
     if (m_simRateX != null) {
       return m_simRateX.get();
     }
