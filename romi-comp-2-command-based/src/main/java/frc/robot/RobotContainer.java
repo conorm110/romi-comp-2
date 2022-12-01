@@ -4,8 +4,10 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.TeleopCommand;
 import frc.robot.subsystems.RomiDrivetrain;
 import edu.wpi.first.wpilibj2.command.Command;
 
@@ -19,8 +21,12 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final RomiDrivetrain m_romiDrivetrain = new RomiDrivetrain();
 
+  private Joystick m_joystick = new Joystick(0); // 0 is the USB Port to be used as indicated on the Driver Station
+  
+
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_romiDrivetrain); // m_autoCommand is what gets run in auto, so example command is run in auto
 
+  private final TeleopCommand m_teleopCommand = new TeleopCommand(m_romiDrivetrain, m_joystick);
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the button bindings
@@ -43,5 +49,9 @@ public class RobotContainer {
   public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
     return m_autoCommand;
+  }
+
+  public Command getTeleopCommand() {
+    return m_teleopCommand;
   }
 }
