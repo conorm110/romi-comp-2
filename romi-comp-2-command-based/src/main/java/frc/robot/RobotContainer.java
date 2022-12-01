@@ -19,7 +19,7 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final RomiDrivetrain m_romiDrivetrain = new RomiDrivetrain();
 
-  private final ExampleCommand m_autoCommand = new ExampleCommand(m_romiDrivetrain);
+  private final ExampleCommand m_autoCommand = new ExampleCommand(m_romiDrivetrain); // m_autoCommand is what gets run in auto, so example command is run in auto
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {

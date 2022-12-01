@@ -19,6 +19,7 @@ public class ExampleCommand extends CommandBase {
    */
   public ExampleCommand(RomiDrivetrain subsystem) {
     m_subsystem = subsystem;
+    m_subsystem.arcadeDrive(1.0, 0.0); // added line - test
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(subsystem);
   }
